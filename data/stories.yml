@@ -29,3 +29,27 @@ stories:
   - intent: deny
   - action: utter_goodbye
   
+- story: Place order 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_order
+  - action: utter_ask_order
+  - intent: place_order
+  - action: action_confirm_order
+
+- story: Place order 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: place_order
+  - action: action_confirm_order
+
+- story: Digression 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_order
+  - action: utter_ask_order
+  - intent: chitchat
+  - action: utter_chitchat

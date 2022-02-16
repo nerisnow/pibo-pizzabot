@@ -7,11 +7,6 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-
 - rule: Ask for detailed order
   steps:
   - intent: ask_order
@@ -22,4 +17,7 @@ rules:
   - intent: place_order
   - action: action_confirm_order
 
-  
+- rule: Chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat

@@ -21,8 +21,11 @@ class ActionConfirmOrder(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        entities = tracker.latest_message["entities"]
-        dispatcher.utter_message(
-            text="Please confirm the order.", json_message=entities
-        )
+
+        entity = next(tracker.get_latest_entity_values("item"), None)
+        if entity:
+            dispatcher.utter_message(text=f"Order placed for: {entity}")
+        else:
+            dispatcher.utter_message(text="Sorry, I couldn't get the item you want to order.")
+            
         return []

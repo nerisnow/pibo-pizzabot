@@ -11,9 +11,13 @@ intents:
   - place_order
   - chitchat
 
+actions:
+  - action_confirm_order
+
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hi! I am PIBO, your personal pizza connoisseur."
+  - text: "Hey! Would you like to order a pizza?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -23,13 +27,16 @@ responses:
   - text: "Did that help you?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Great!"
 
   utter_goodbye:
   - text: "Bye"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_ask_order:
+  - text: Which pizza would you like to order?
 
 session_config:
   session_expiration_time: 60
