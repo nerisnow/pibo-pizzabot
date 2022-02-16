@@ -30,7 +30,7 @@ responses:
   - text: "Great!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Thanks for your time! Bye"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."

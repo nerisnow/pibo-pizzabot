@@ -21,3 +21,8 @@ rules:
   steps:
   - intent: chitchat
   - action: utter_chitchat
+
+- rule: Say hello anytime the user says hi
+  steps:
+  - intent: greet
+  - action: utter_greet

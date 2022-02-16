@@ -7,19 +7,6 @@ nlu:
     - how are you getting on
     - how's your day going
     - how are you?
-    - how are you doing?
-    - how are the things going
-    - are you alright
-    - are you okay?
-    - how are you feeling
-    - how are you going?
-    - how are you today?
-    - how do you do?
-    - how do you feel?
-    - how have you been?
-    - how is it going?
-    - how is your day
-    - how is your day going
 
 - intent: chitchat/ask_howold
   examples: |
@@ -30,23 +17,7 @@ nlu:
     - give me your age?
     - how about your age
     - how many ages?
-    - how old are you?
-    - how old will you be this year?
-    - in what year were you born?
-    - tell me how old you are?
-    - tell me your age number?
-    - tell me your age?
-    - what age are you
-    - what is your age?
-    - WHen's your birthday?
-    - what is your exact age?
-    - what number represents your age?
-    - what year were you born?
-    - what's your age?
-    - whats your age?
-    - whats your birth year?
-    - when were you born?
-    - What's your age?
+
 
 - intent: chitchat/ask_isbot
   examples: |
