@@ -141,3 +141,6 @@ dmypy.json
 
 # Pycharm files
 .idea
+
+# rasa
+.rasa
