@@ -1,21 +1,10 @@
 version: "3.0"
 
 rules:
-
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye
-
-- rule: Ask for detailed order
-  steps:
-  - intent: ask_order
-  - action: utter_ask_order
-
-- rule: Confirm order
-  steps:
-  - intent: place_order
-  - action: action_confirm_order
 
 - rule: Chitchat
   steps:
@@ -26,3 +15,36 @@ rules:
   steps:
   - intent: greet
   - action: utter_greet
+
+- rule: Activate Pizza Form
+  steps:
+  - intent: place_order
+  - action: pizza_form
+  - active_loop: pizza_form
+
+- rule: Submit form
+  condition:
+  # Condition that form is active.
+  - active_loop: pizza_form
+  steps:
+  # Form is deactivated
+  - action: pizza_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: utter_submit
+  - action: utter_pizza_slots
+
+- rule: Interruption in Pizza Form
+  condition:
+  # Condition that form is active.
+  - active_loop: pizza_form
+  steps:
+  # This unhappy path handles the case of an intent `chitchat`.
+  - intent: chitchat
+  - action: utter_chitchat
+  # Return to form after handling the `chitchat` intent
+  - action: pizza_form
+  - active_loop: pizza_form
+  
