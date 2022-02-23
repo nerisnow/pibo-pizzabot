@@ -26,7 +26,7 @@ ALLOWED_PIZZA_TYPES = [
     "vegiterian",
     "chicken",
 ]
-ALLOWED_TOPPINGS = ["cheese", "olives", "beacon"]
+ALLOWED_TOPPINGS = ["cheese", "olives", "bacon"]
 
 
 class ValidatePizzaForm(FormValidationAction):

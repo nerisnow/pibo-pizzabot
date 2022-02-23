@@ -8,9 +8,7 @@ responses:
   - text: I have been taking orders since Feb 2022.
 
   utter_chitchat/ask_isbot:
-  - text: I'm Dear Ruby, TIME Magazine's COVID-19 automated information assistant.
-      I'm here to help you get the answers you need about the pandemic as quickly
-      as possible.
+  - text: Yes, I am a bot. I can help you order a pizza.
 
   utter_chitchat/tell_joke:
   - text: Evening news is where they begin with 'Good evening', and then proceed to tell you why it isn't.
